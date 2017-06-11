@@ -15,10 +15,6 @@ function sum(a,b) { //eslint-disable-line
   return [sum, msg];
 }
 
-var gaby = sum(1,2);
-// [3, 'The sum of 1 and 2 is 3.']
-var albert = gaby[1];
-var albert = sum(2,4)[1];
 // TODO: Here is the test for sum(); uncomment it to run it
 testSum(4,7);
 
@@ -81,11 +77,14 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+  var arrayTest1 = sum(testArray[0], testArray[2])[0];
+  var totalArray = sum(arrayTest1, testArray[2])[0];
+  var testingMessage = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
+  return[arrayTest1,testingMessage];
 }
 
 // TODO: Here is the test for sumArray(); uncomment it to run it
-// testSumArray(testArray);
+testSumArray();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
